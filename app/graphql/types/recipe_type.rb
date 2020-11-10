@@ -1,5 +1,11 @@
 module Types
   class RecipeType < Types::BaseObject
+    field :id, String, null: false
+
+    def id
+      object.id
+    end
+
     field :title, String, null: false
 
     field :description, String, null: false
