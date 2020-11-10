@@ -1,13 +1,25 @@
 module Types
   class QueryType < Types::BaseObject
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+    field :recipe, Types::RecipeType, null: false do
+      argument :id, String, required: true
+    end
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    def recipe(id: )
+      $contentful_client.entry(id, content_type: 'recipe')
+    end
+
+    field :recipe_collection, Types::RecipeCollection, null: false do
+      argument :limit, Integer, required: false
+      argument :skip, Integer, required: false
+    end
+
+    def recipe_collection(limit: 100, skip: 0)
+      $contentful_client.entries(
+        content_type: 'recipe',
+        limit: limit,
+        skip: skip,
+        order: 'sys.createdAt'
+      )
     end
   end
 end
