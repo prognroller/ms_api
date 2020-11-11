@@ -14,12 +14,7 @@ module Types
     end
 
     def recipe_collection(limit: 100, skip: 0)
-      $contentful_client.entries(
-        content_type: 'recipe',
-        limit: limit,
-        skip: skip,
-        order: 'sys.createdAt'
-      )
+      $contentful_client.entries(content_type: 'recipe', limit: 100, skip: 0, order: 'sys.createdAt')
     end
   end
 end
