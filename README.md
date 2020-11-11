@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Clone project
 
-Things you may want to cover:
+Run `bundle`
 
-* Ruby version
+`rake db:create`
 
-* System dependencies
+and finally `rails s`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Frontend for this backend is `https://github.com/prognroller/ms_front`
