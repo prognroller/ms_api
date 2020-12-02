@@ -1,6 +1,6 @@
 $contentful_client ||= Contentful::Client.new(
-    access_token: '7ac531648a1b5e1dab6c18b0979f822a5aad0fe5f1109829b8a197eb2be4b84c',
-    space: 'kk2bw5ojx476',
+    access_token: 'NySIpwFxwfDTxkrWLWV0qSinRcBFC-oQVq9Nqioy6Dc',
+    space: 'g33vm6qmp0hj',
     dynamic_entries: :auto,
     raise_errors: true,
     raise_for_empty_fields: false
